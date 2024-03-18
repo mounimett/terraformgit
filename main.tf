@@ -10,7 +10,8 @@ terraform {
 provider "aws" {
   # Configuration options
   region = "us-east-1"
-
+access_key ="AKIARGKJVQHUDAONK3PV"
+secret_key ="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"
 }
 
 resource "aws_instance" "aws-jenkins-ec2" {
