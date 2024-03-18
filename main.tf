@@ -36,8 +36,8 @@ user_data = <<-EOF
   EOF
 }
 
-resource "aws_security_group" "jenkins_sg" {
-  name = "jenkins-sg"
+resource "aws_security_group" "jenkins_security" {
+  name = "jenkins-security"
   vpc_id = "vpc-0f44e265ed34f5383"
 
  ingress  {
