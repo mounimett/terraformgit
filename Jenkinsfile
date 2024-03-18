@@ -3,7 +3,7 @@ pipeline {
         stages {
             stage ("checkout from git") {
                 steps {
-                    git branch: 'main', url: 'https://github.com/mounicamettupalli/infraterraform.git'
+                    git branch: 'main', url: 'https://github.com/mounimett/terraformgit.git'
                 }
             }
             stage("Install Terraform"){
