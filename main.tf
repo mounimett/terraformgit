@@ -17,7 +17,7 @@ secret_key ="F6x5XsOg3spzlmR4Lf+drsZNJdkLNr4dd3d5h92/"
 resource "aws_instance" "aws-jenkins-ec2" {
   ami = "ami-0d7a109bf30624c99"
   instance_type = "t2.medium"
-  vpc_security_group_ids = [aws_security_group.jenkins_security.id]
+  vpc_security_group_ids = [aws_security_group.jenkins_g.id]
   tags = {
     Name = "Jenkins_Server"
   }
@@ -36,8 +36,8 @@ user_data = <<-EOF
   EOF
 }
 
-resource "aws_security_group" "jenkins_security" {
-  name = "jenkins-security"
+resource "aws_security_group" "jenkins_g" {
+  name = "jenkins_g"
   vpc_id = "vpc-0f44e265ed34f5383"
 
  ingress  {
