@@ -17,7 +17,7 @@ secret_key ="F6x5XsOg3spzlmR4Lf+drsZNJdkLNr4dd3d5h92/"
 resource "aws_instance" "aws-jenkins-ec2" {
   ami = "ami-0d7a109bf30624c99"
   instance_type = "t2.medium"
-  vpc_security_group_ids = [aws_security_group.jenkins_sg.id]
+  vpc_security_group_ids = [aws_security_group.jenkins_security.id]
   tags = {
     Name = "Jenkins_Server"
   }
